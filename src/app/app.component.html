@@ -1,0 +1,48 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Shein</ion-list-header>
+          <ion-note>othmane.mezgueldi@shein.com</ion-note>
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let m of menus; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[m.url]" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="m.icon + '-outline'" [md]="m.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ m.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="schedule">
+          <ion-icon name="calendar"></ion-icon>
+          <ion-label>Schedule</ion-label>
+          <ion-badge>6</ion-badge>
+        </ion-tab-button>
+
+        <ion-tab-button tab="speakers">
+          <ion-icon name="person-circle"></ion-icon>
+          <ion-label>Speakers</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="map">
+          <ion-icon name="map"></ion-icon>
+          <ion-label>Map</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="about">
+          <ion-icon name="information-circle"></ion-icon>
+          <ion-label>About</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-split-pane>
+</ion-app>

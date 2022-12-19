@@ -1,0 +1,7 @@
+{
+  "name": "Shein",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
