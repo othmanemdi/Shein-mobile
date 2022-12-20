@@ -34,9 +34,10 @@ const routes: Routes = [
   {
     path: 'proced-checkout',
     loadChildren: () => import('./proced-checkout/proced-checkout.module').then(m => m.ProcedCheckoutPageModule)
-  },  {
+  },
+  {
     path: 'thank-you',
-    loadChildren: () => import('./thank-you/thank-you.module').then( m => m.ThankYouPageModule)
+    loadChildren: () => import('./thank-you/thank-you.module').then(m => m.ThankYouPageModule)
   }
 
 ];

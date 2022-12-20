@@ -12,6 +12,7 @@ export class LoginPage implements OnInit {
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+    this.authService.logout();
   }
 
   onLogin(user: any) {

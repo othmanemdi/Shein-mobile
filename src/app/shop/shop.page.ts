@@ -8,14 +8,14 @@ import { ProductsService } from '../services/products.service';
 })
 export class ShopPage implements OnInit {
 
-
-  public produits: any;
+  public produits?: any;
 
   constructor(private productService: ProductsService) { }
 
   ngOnInit() {
     this.productService.getProducts()
       .subscribe(data => {
+        // console.log(data)
         this.produits = data;
       }, err => {
         console.log(err)
