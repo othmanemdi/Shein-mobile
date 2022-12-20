@@ -6,11 +6,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public menus = [
-    { title: 'Home', url: 'home', icon: 'home' },
-    { title: 'Shop', url: 'shop', icon: 'shirt' },
-    { title: 'Cart', url: 'cart', icon: 'cart' },
+  public categories = [
+    { title: 'Iphone', url: 'folder/Iphone', icon: 'phone-portrait' },
+    { title: 'Tablete', url: 'folder/Tablete', icon: 'tablet-portrait' },
+    { title: 'Macbook', url: 'folder/Macbook', icon: 'laptop' },
+    { title: 'Imac', url: 'folder/Imac', icon: 'tv' },
+    { title: 'Apple watch', url: 'folder/Apple watch', icon: 'watch' },
     { title: 'Logout', url: 'login', icon: 'log-out' },
   ]
+
+  // public menu = [
+  //   { title: 'Home', url: 'home', icon: 'home' },
+  //   { title: 'Shop', url: 'shop', icon: 'shirt' },
+  //   { title: 'Cart', url: 'cart', icon: 'cart' },
+  //   { title: 'Logout', url: 'login', icon: 'log-out' },
+  // ]
   constructor() { }
 }

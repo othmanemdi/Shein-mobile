@@ -6,11 +6,11 @@
           <ion-list-header>Shein</ion-list-header>
           <ion-note>othmane.mezgueldi@shein.com</ion-note>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let m of menus; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[m.url]" lines="none" detail="false"
+          <ion-menu-toggle auto-hide="false" *ngFor="let c of categories; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[c.url]" lines="none" detail="false"
               routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="m.icon + '-outline'" [md]="m.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ m.title }}</ion-label>
+              <ion-icon slot="start" [ios]="c.icon + '-outline'" [md]="c.icon + '-outline'"></ion-icon>
+              <ion-label>{{ c.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
 
@@ -22,25 +22,25 @@
 
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="schedule">
-          <ion-icon name="calendar"></ion-icon>
-          <ion-label>Schedule</ion-label>
+        <ion-tab-button tab="home">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="shop">
+          <ion-icon name="shirt"></ion-icon>
+          <ion-label>Shop</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="cart">
+          <ion-icon name="cart"></ion-icon>
+          <ion-label>Cart</ion-label>
           <ion-badge>6</ion-badge>
         </ion-tab-button>
 
-        <ion-tab-button tab="speakers">
-          <ion-icon name="person-circle"></ion-icon>
-          <ion-label>Speakers</ion-label>
-        </ion-tab-button>
-
-        <ion-tab-button tab="map">
-          <ion-icon name="map"></ion-icon>
-          <ion-label>Map</ion-label>
-        </ion-tab-button>
-
-        <ion-tab-button tab="about">
-          <ion-icon name="information-circle"></ion-icon>
-          <ion-label>About</ion-label>
+        <ion-tab-button tab="login">
+          <ion-icon name="reader"></ion-icon>
+          <ion-label>Orders</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
